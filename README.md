@@ -25,3 +25,14 @@ if (state) {
     JSON.parse(state); // { name : "Asaad" }
 }
 ```
+You may use a code structure like this:
+```typescript
+class PersistedStorage extends MyStorage{
+    // your constructor here
+    addPersistedItem(key: string, value: T): boolean { 
+        const result = this.addItem(key, value);
+        // your code here
+    }
+    // the rest of methods here 
+}
+```
